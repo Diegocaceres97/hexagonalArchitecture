@@ -8,7 +8,7 @@ const authDetailsMock: AuthDetails = {
 
 const permissionsMock: Permissions = {
     admin: true,
-    user: false,
+    user: true,
 }
 
 export class ControlAuthenticatorStub implements ForControlAuthenticating {
