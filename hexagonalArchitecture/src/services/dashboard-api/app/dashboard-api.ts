@@ -17,7 +17,7 @@ export class DashboardApi implements ForAuthenticating {
         return {
             ...user,
             ...authDetails,
-            ...permissions,
+            permissions,
         }
     }
     async register(user: User, Password: string):Promise<AuthenticatedUser>{
@@ -30,7 +30,7 @@ export class DashboardApi implements ForAuthenticating {
         return {
             ...newUser,
             ...authDetails,
-            ...permissions,
+            permissions,
         }
     }
 }
