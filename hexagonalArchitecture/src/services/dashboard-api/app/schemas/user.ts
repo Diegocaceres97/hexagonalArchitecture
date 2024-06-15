@@ -6,6 +6,7 @@ export interface AuthenticatedUser {
   token: string;
   refreshToken: string;
   permissions?: Permissions
+  password?: string;
 }
 
 export type User = Pick<AuthenticatedUser,  'email' | 'name' >;

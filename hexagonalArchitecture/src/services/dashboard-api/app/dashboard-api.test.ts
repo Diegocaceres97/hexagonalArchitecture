@@ -14,7 +14,7 @@ describe('Dashboard API', () => {
         //GIVEN
         const mockedParams = {
             email: 'test@test.com',
-            password: 'test'
+            password: 'password'
         }
 
         const expectedResult: AuthenticatedUser= {
@@ -26,7 +26,8 @@ describe('Dashboard API', () => {
             permissions: {
                 admin: true,
                 user: true
-            }
+            },
+            password: 'password'
         }
 
         //WHEN

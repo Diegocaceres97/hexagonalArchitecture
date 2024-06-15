@@ -1,17 +1,18 @@
 import { ForRepoQuerying } from "../../ports/drivens";
-import { User } from "../../../repository/app/schemas";
+import { RepoUser } from "../../../repository/app/schemas";
 
-const userMock: User = {
+const userMock: RepoUser = {
     id: '123456789',
     email: 'test@test.com',
     name: 'test',
+    password: 'password',
 }
 
 export class RepoQuerierStub implements ForRepoQuerying {
-    async getUser(email: string): Promise<any> {
+    async getUser(email: string): Promise<RepoUser> {
         return Promise.resolve(userMock);
     }
-    async createrUser(email: any, password: string): Promise<any> {
+    async createrUser(email: any, password: string): Promise<RepoUser> {
         return Promise.resolve(userMock);
     }
 }
